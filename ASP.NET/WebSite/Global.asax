@@ -4,24 +4,6 @@
 
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
         ' Codice eseguito all\'avvio dell\'applicazione
-    Try
-            For Each name As String In Request.Form
-                Dim xengine As New XABAL.Class1
-                If xengine.XabalController(Request.Form(name)) = "KO" Then
-                    Session.Item("Result") = "Invalid Parameter!"
-                    Response.Redirect("ResultError.aspx")
-                End If
-            Next
-            For Each name As String In Request.QueryString
-                Dim xengine As New XABAL.Class1
-                If xengine.XabalController(Request.QueryString(name)) = "KO" Then
-                    Session.Item("Result") = "Invalid Request!"
-                    Response.Redirect("ResultError.aspx")
-                End If
-            Next
-        Catch ex As Exception
-
-        End Try
     End Sub
     
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
@@ -44,6 +26,24 @@
     End Sub
     
     Sub Application_BeginRequest(ByVal sender As Object, ByVal e As EventArgs)
+    Try
+            For Each name As String In Request.Form
+                Dim xengine As New XABAL.Class1
+                If xengine.XabalController(Request.Form(name)) = "KO" Then
+                    Session.Item("Result") = "Invalid Parameter!"
+                    Response.Redirect("ResultError.aspx")
+                End If
+            Next
+            For Each name As String In Request.QueryString
+                Dim xengine As New XABAL.Class1
+                If xengine.XabalController(Request.QueryString(name)) = "KO" Then
+                    Session.Item("Result") = "Invalid Request!"
+                    Response.Redirect("ResultError.aspx")
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
     End Sub
        
 </script>
