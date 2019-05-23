@@ -28,22 +28,88 @@
     Sub Application_BeginRequest(ByVal sender As Object, ByVal e As EventArgs)
     Try
             For Each name As String In Request.Form
-                Dim xengine As New XABAL.Class1
-                If xengine.XabalController(Request.Form(name)) = "KO" Then
-                    Session.Item("Result") = "Invalid Parameter!"
-                    Response.Redirect("ResultError.aspx")
+                If XabalController(Request.Form(name)) = "KO" Then
+                    strErrorMessage = String.Format("Unauthorized Parameter found!")
+                    Throw New Exception(strErrorMessage)
                 End If
             Next
             For Each name As String In Request.QueryString
-                Dim xengine As New XABAL.Class1
-                If xengine.XabalController(Request.QueryString(name)) = "KO" Then
-                    Session.Item("Result") = "Invalid Request!"
-                    Response.Redirect("ResultError.aspx")
+                If XabalController(Request.QueryString(name)) = "KO" Then
+                    strErrorMessage = String.Format("Unauthorized Request found!")
+                    Throw New Exception(strErrorMessage)
                 End If
             Next
         Catch ex As Exception
 
         End Try
     End Sub
+    
+    Public Function XabalController(ByVal data As String) As String
+        data = data.ToLower
+        If data.Contains("<") Then
+            Return "KO"
+        End If
+        If data.Contains("<script") Then
+            Return "KO"
+        End If
+        If data.Contains("<script>") Then
+            Return "KO"
+        End If
+        If data.Contains("/>") Then
+            Return "KO"
+        End If
+        If data.Contains(">") Then
+            Return "KO"
+        End If
+        If data.Contains("@@version") Then
+            Return "KO"
+        End If
+        If data.Contains("sqlmap") Then
+            Return "KO"
+        End If
+        If data.Contains("connect()") Then
+            Return "KO"
+        End If
+        If data.Contains("cast(") Then
+            Return "KO"
+        End If
+        If data.Contains("char(") Then
+            Return "KO"
+        End If
+        If data.Contains("bchar(") Then
+            Return "KO"
+        End If
+        If data.Contains("sysdatabases") Then
+            Return "KO"
+        End If
+        If data.Contains("(select") Then
+            Return "KO"
+        End If
+        If data.Contains("convert(") Then
+            Return "KO"
+        End If
+        If data.Contains("dbnetlib") Then
+            Return "KO"
+        End If
+        If data.Contains("connect(") Then
+            Return "KO"
+        End If
+        If data.Contains("int%2c(") Then
+            Return "KO"
+        End If
+        If data.Contains("sysobjects") Then
+            Return "KO"
+        End If
+        If data.Contains("count(") Then
+            Return "KO"
+        End If
+        If data.Contains("count(") Then
+            Return "KO"
+        End If
+        If data.Contains(Chr(34) & " target=" & Chr(34) & "_blank" & Chr(34)) Then
+            Return "KO"
+        End If
+        Return "OK"
+    End Function
        
 </script>
