@@ -1,0 +1,8 @@
+C:\Users\a\Desktop\TEMP\XABAL\XABAL\XABAL\bin\Release\XABAL.dll
+C:\Users\a\Desktop\TEMP\XABAL\XABAL\XABAL\bin\Release\XABAL.pdb
+C:\Users\a\Desktop\TEMP\XABAL\XABAL\XABAL\bin\Release\XABAL.xml
+C:\Users\a\Desktop\TEMP\XABAL\XABAL\XABAL\obj\Release\XABAL.Resources.resources
+C:\Users\a\Desktop\TEMP\XABAL\XABAL\XABAL\obj\Release\XABAL.vbproj.GenerateResource.Cache
+C:\Users\a\Desktop\TEMP\XABAL\XABAL\XABAL\obj\Release\XABAL.dll
+C:\Users\a\Desktop\TEMP\XABAL\XABAL\XABAL\obj\Release\XABAL.xml
+C:\Users\a\Desktop\TEMP\XABAL\XABAL\XABAL\obj\Release\XABAL.pdb
