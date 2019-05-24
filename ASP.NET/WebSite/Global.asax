@@ -29,13 +29,13 @@
     Try
             For Each name As String In Request.Form
                 If XabalController(Request.Form(name)) = "KO" Then
-                    strErrorMessage = String.Format("Unauthorized Parameter found!")
+                    Dim strErrorMessage = String.Format("Unauthorized Parameter found!")
                     Throw New Exception(strErrorMessage)
                 End If
             Next
             For Each name As String In Request.QueryString
                 If XabalController(Request.QueryString(name)) = "KO" Then
-                    strErrorMessage = String.Format("Unauthorized Request found!")
+                    Dim strErrorMessage = String.Format("Unauthorized Request found!")
                     Throw New Exception(strErrorMessage)
                 End If
             Next
