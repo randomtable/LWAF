@@ -1,0 +1,11 @@
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\bin\Release\ServiceLibrary.dll
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\bin\Release\ServiceLibrary.pdb
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\bin\Release\ServiceLibrary.xml
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\bin\Release\CABAL - Engine.dll
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\obj\Release\ServiceLibrary.vbprojResolveAssemblyReference.cache
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\obj\Release\ServiceLibrary.Resources.resources
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\obj\Release\ServiceLibrary.vbproj.GenerateResource.Cache
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\obj\Release\ServiceLibrary.dll
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\obj\Release\ServiceLibrary.xml
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\obj\Release\ServiceLibrary.pdb
+C:\Users\a\Desktop\TEMP\XABAL\ServiceLibrary\ServiceLibrary\bin\Release\ContractLibrary.dll
